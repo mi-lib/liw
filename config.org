@@ -1,0 +1,17 @@
+PREFIX=$(HOME)/usr
+PROJNAME=liw
+VERSION=1.1.1
+
+DEPENDENCY="zeda=1.1.1"
+
+# dynamic linker(libdl)
+CONFIG_USE_LIBDL=y
+
+# POSIX thread(pthread)
+CONFIG_USE_PTHREAD=y
+
+# Realtime Extension
+CONFIG_USE_RT=y
+
+# Enhanced Realtime Controller(RTC)
+CONFIG_USE_RTC=y

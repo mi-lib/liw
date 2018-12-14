@@ -1,0 +1,3 @@
+TARGET=measuretime
+
+include ../makefile

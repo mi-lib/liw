@@ -1,0 +1,3 @@
+TARGET=semtest
+
+include ../makefile
