@@ -12,6 +12,7 @@ SAMPLEDIR:=$(ROOTDIR)/example
 CHKDEP=`which zeda-chkdep`
 
 all:
+	@$(CHKDEP) $(DEPENDENCY) || exit 1
 	@cd $(SRCDIR); make
 	@cd $(APPDIR); make
 
