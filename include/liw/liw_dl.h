@@ -37,7 +37,7 @@ typedef struct{
 bool liwDLOpen(liwDL *plugin, char filename[]);
 #define liwDLClose(p) do{\
   dlclose( (p)->handle );\
-  zNameDestroy( p );\
+  zNameFree( p );\
 } while(0)
 
 #define _liwDLSymbol(p,s) dlsym( (p)->handle, (s) )
