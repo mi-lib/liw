@@ -19,6 +19,7 @@ ifeq ($(CONFIG_USE_RT),y)
 endif
 
 INSTALL=install -m 755
+UNINSTALL=rm -f
 
 CONFIGGEN=zeda-config-gen
 CONFIG=liw-config
@@ -37,3 +38,6 @@ install: $(TARGET)
 clean:
 	@echo " CLEAN"
 	-@rm -f *.o *~ core $(TARGET)
+uninstall:
+	@echo " UNINSTALL	" $(TARGET)
+	@cd $(BINDIR); $(UNINSTALL) $(TARGET); cd -

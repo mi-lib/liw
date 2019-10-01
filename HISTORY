@@ -1,3 +1,4 @@
+2019.10. 1. Enabled make uninstall. [makefile]
 2019. 8. 8. Reflected renaming of zNameDestroy to zNameFree. [liw_dl]
 2019. 6.18. Corrected makefile to check dependency (thanks to Naoki Wakisaka). [makefile]
 2019. 6.13. Registered lib and some dot files for Git. [lib]
