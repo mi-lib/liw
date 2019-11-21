@@ -4,14 +4,14 @@ VERSION=1.1.3
 
 DEPENDENCY="zeda=1.2.13"
 
-# dynamic linker(libdl)
+# dynamic linker (libdl)
 CONFIG_USE_LIBDL=y
 
-# POSIX thread(pthread)
+# POSIX thread (pthread)
 CONFIG_USE_PTHREAD=y
 
 # Realtime Extension
 CONFIG_USE_RT=y
 
-# Enhanced Realtime Controller(RTC)
+# Enhanced Realtime Controller (RTC)
 CONFIG_USE_RTC=y
