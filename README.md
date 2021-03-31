@@ -59,7 +59,7 @@ Then, make and install.
    % make && make install
    ```
 
-## uninstall
+### uninstall
 
 Do:
 
