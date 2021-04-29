@@ -1,7 +1,8 @@
 include ../config
 
-INCLUDE=-I$(PREFIX)/include
-LIB=-L$(PREFIX)/lib
+INCLUDE=`zeda-config -I`
+LIB=`zeda-config -L`
+DEF=`zeda-config -D`
 BINDIR=$(PREFIX)/bin
 
 LINK=-lliw `zeda-config -l`
@@ -31,7 +32,7 @@ all: $(TARGET)
 $(CONFIG):
 	@echo " GENERATE" $@
 	-@rm -f $@
-	@$(CONFIGGEN) -I "$(INCLUDE)" -L "$(LIB)" -l "$(LINK)" -v $(VERSION) > $@
+	@$(CONFIGGEN) -I "$(INCLUDE)" -L "$(LIB)" -D "$(DEF)" -l "$(LINK)" -v $(VERSION) > $@
 install: $(TARGET)
 	@echo " INSTALL	" $^
 	@$(INSTALL) $^ $(BINDIR)
