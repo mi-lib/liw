@@ -1,0 +1,16 @@
+INCLUDE+=`zeda-config -I`
+LIB+=`zeda-config -L`
+DEF+=`zeda-config -D`
+LINK+=`zeda-config -l`
+
+ifeq ($(CONFIG_USE_LIBDL),y)
+	LINK += "-ldl"
+endif
+
+ifeq ($(CONFIG_USE_PTHREAD),y)
+	LINK += "-lpthread"
+endif
+
+ifeq ($(CONFIG_USE_RT),y)
+	LINK += "-lrt"
+endif
