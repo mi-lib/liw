@@ -9,7 +9,7 @@ DEF=`$(CONFIG) -D`
 LINK=`$(CONFIG) -l`
 
 CC=gcc
-CFLAGS=-ansi -Wall -O3 $(INCLUDE) $(LIB) $(DEF)
+CFLAGS=-Wall -O3 $(INCLUDE) $(LIB) $(DEF)
 
 COMPILE=$(CC) $(CFLAGS) -o $@ $< $(LINK)
 INSTALL=install -m 755

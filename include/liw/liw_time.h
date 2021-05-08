@@ -43,7 +43,7 @@ __BEGIN_DECLS
 int liwSleep(long int sec, long int nsec);
 
 /* CPU clock using RDTSC */
-__INLINE long long liwClock(void){
+__INLINE unsigned long long liwClock(void){
   unsigned long long ret;
   __asm__ volatile ( "rdtsc" : "=A" (ret) );
   return ret;
