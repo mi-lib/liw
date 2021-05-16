@@ -36,6 +36,7 @@ int liwCPUFreq(void)
   FILE *fp;
   char str[BUFSIZ];
   const char *cpuinfo = "/proc/cpuinfo";
+  int freq = 0;
 
   if( !( fp = fopen( cpuinfo, "r" ) ) ){
     ZRUNERROR( "fatal error. %s doesn't exist!", cpuinfo );
@@ -46,7 +47,8 @@ int liwCPUFreq(void)
     if( strncmp( str, "cpu MHz", 7 ) == 0 ) break;
   }
   fclose( fp );
-  return zSInt( &str[7] );
+  zSInt( &str[7], &freq );
+  return freq;
 }
 
 double liwCPURate(void)
