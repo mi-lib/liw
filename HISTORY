@@ -1,3 +1,4 @@
+2021. 5.30. Applied zeda-deb-gen. [makefile]
 2021. 5.16. Reflected new specification of zSInt. [liw_time]
 2021. 5. 8. Reflected -ansi option of zeda-makefile-gen. [app]
 2021. 5. 8. Debugged app/makefile. [app]
