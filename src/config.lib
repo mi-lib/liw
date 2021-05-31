@@ -1,0 +1,13 @@
+OBJ=liw_time.o liw_coproc.o liw_paction.o\
+	liw_fifo.o liw_ipc.o liw_lock.o\
+	liw_socket.o
+
+ifeq ($(CONFIG_USE_LIBDL),y)
+	OBJ += liw_dl.o
+endif
+
+ifeq ($(CONFIG_USE_RTC),y)
+	OBJ += liw_rtc.o
+endif
+
+DLIB=libliw.so
