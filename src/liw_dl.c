@@ -43,7 +43,7 @@ liwDLHandle liwDLSymbol(liwDL *plugin, char *symbol)
 
 bool liwDLListOpen(liwDLList *list, char path[], char *suffix)
 {
-  register int num, i;
+  int num, i;
   struct dirent **entry;
   char *sfx, pluginname[BUFSIZ];
   bool result = true;
@@ -159,7 +159,7 @@ bool liwDLAPIListAdd(liwDLAPIList *list, char *name, char *api)
 
 bool liwDLAPIListOpen(liwDLAPIList *list, char path[], char *suffix, char *api)
 {
-  register int num, i;
+  int num, i;
   struct dirent **entry;
   char *sfx, pluginname[BUFSIZ];
   bool result = true;

@@ -47,7 +47,7 @@ int liwExecCmdParse(char *cmd, char ***argv)
 
 void liwExecCmdFree(char **argv, int num)
 {
-  register int i;
+  int i;
 
   for( i=0; i<num; i++ ) free( argv[i] );
   free( argv );

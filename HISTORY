@@ -1,3 +1,4 @@
+2022. 9. 4. Removed register keywords. [liw_dl, liw_coproc]
 2022. 9. 3. Reflected new specification of zeda-makefile-gen, and modified src/makefile. [src]
 2021. 6. 1. Applied new zeda-makefile-gen to compilation of shared objects. [src]
 2021. 6. 1. Modified allclean.sh in example to skip directories without makefile. [example]
