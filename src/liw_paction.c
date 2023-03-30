@@ -97,7 +97,7 @@ int liwPActionRTCreate(liwPActionRT *pa, int id, long int interval, void (* hand
   }
   pa->se.sigev_notify = SIGEV_SIGNAL;
   pa->se.sigev_signo = SIGRTMIN + id;
-  if( timer_create( CLOCK_REALTIME, &pa->se, (timer_t)&pa->id ) < 0 ){
+  if( timer_create( CLOCK_REALTIME, &pa->se, (timer_t *)&pa->id ) < 0 ){
     ZRUNERROR( "cannot create timer." );
     return -1;
   }

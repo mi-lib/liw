@@ -1,8 +1,8 @@
 PREFIX=$(HOME)/usr
 PROJNAME=liw
-VERSION=1.2.9
+VERSION=1.2.10
 
-DEPENDENCY="zeda=1.6.22"
+DEPENDENCY="zeda=1.6.45"
 
 # dynamic linker (libdl)
 CONFIG_USE_LIBDL=y

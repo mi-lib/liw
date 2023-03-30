@@ -67,7 +67,7 @@ int liwSHMModeAttach(liwSHM *shm, char *key, int size, int mode)
       ZALLOCERROR();
     return -1;
   }
-  if( ( shm->mp = shmat( shm->id, NULL, 0 ) ) < 0 ){
+  if( ( shm->mp = shmat( shm->id, NULL, 0 ) ) == (void *)-1 ){
     ZRUNERROR( "cannot attach to shared memory (ID=%d)", shm->id );
     return -1;
   }

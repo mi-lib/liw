@@ -152,7 +152,7 @@ bool liwDLAPIListAdd(liwDLAPIList *list, char *name, char *api)
     return false;
   }
   liwDLOpen( &cp->data.plugin, name );
-  cp->data.api = liwDLSymbol( &cp->data.plugin, api );
+  cp->data.api = (liwDLAPI *)liwDLSymbol( &cp->data.plugin, api );
   zListInsertTail( list, cp );
   return true;
 }

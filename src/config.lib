@@ -9,5 +9,3 @@ endif
 ifeq ($(CONFIG_USE_RTC),y)
 	OBJ += liw_rtc.o
 endif
-
-DLIB=libliw.so

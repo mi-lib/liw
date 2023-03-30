@@ -2,15 +2,19 @@ INCLUDE+=`zeda-config -I`
 LIB+=`zeda-config -L`
 DEF+=`zeda-config -D`
 LINK+=`zeda-config -l`
+LINKCPP+=`zeda-config -lcpp`
 
 ifeq ($(CONFIG_USE_LIBDL),y)
 	LINK += "-ldl"
+	LINKCPP += "-ldl"
 endif
 
 ifeq ($(CONFIG_USE_PTHREAD),y)
 	LINK += "-lpthread"
+	LINKCPP += "-lpthread"
 endif
 
 ifeq ($(CONFIG_USE_RT),y)
 	LINK += "-lrt"
+	LINKCPP += "-lrt"
 endif
