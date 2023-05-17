@@ -30,7 +30,7 @@ __BEGIN_DECLS
 
 typedef void *liwDLHandle;
 typedef struct{
-  Z_NAMED_CLASS
+  Z_NAMED_CLASS;
   liwDLHandle handle;
 } liwDL;
 
@@ -67,7 +67,7 @@ liwDLHandle liwDLListSymbol(liwDLList *list, char *symbol);
  * ********************************************************** */
 
 typedef struct{
-  Z_NAMED_CLASS
+  Z_NAMED_CLASS;
   char *label;
   int argc;
 } liwDLAPI;

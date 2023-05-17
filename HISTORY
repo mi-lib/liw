@@ -1,3 +1,5 @@
+2023. 5.17. Reflected modification of Z_NAMED_CLASS. [liw_dl]
+2023. 5.16. Modified src/makefile. [src]
 2023. 3.30. Modified liwDLAPIListAdd to store the type-casted return value of liwDLSymbol in the api member of liwDLAPI. [liw_dl]
 2023. 3.30. Modified liwSHMModeAttach to check the return value from shmat correctly. [liw_ipc]
 2023. 3.30. Corrected type casting of the third argument of liwPActionRTCreate. [liw_paction]
