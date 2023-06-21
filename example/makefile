@@ -1,5 +1,3 @@
-include ../../config
-
 INCLUDE=`liw-config -I`
 LIB=`liw-config -L`
 LINK=`liw-config -l`
