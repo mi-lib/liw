@@ -1,3 +1,4 @@
+2024. 5.13. Put config.app in app. [app]
 2023. 6.21. Separated config and libinfo. [all]
 2023. 5.17. Reflected modification of Z_NAMED_CLASS. [liw_dl]
 2023. 5.16. Modified src/makefile. [src]
