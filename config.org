@@ -1,4 +1,5 @@
 PREFIX=${HOME}/usr
+STD=
 
 # dynamic linker (libdl)
 CONFIG_USE_LIBDL=y
