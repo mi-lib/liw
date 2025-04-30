@@ -8,7 +8,11 @@
 
 #define TIME 1000
 
-void loop(int hz)
+typedef struct{
+  int hz;
+} arg_t;
+
+void loop(arg_t *arg)
 {
   int i, fd;
   unsigned long tmp;
@@ -16,7 +20,7 @@ void loop(int hz)
   fd = liwRTCOpen();
 
   /* Read periodic IRQ rate */
-  liwRTCSetPeriodicIRQ( fd, hz );
+  liwRTCSetPeriodicIRQ( fd, arg->hz );
   liwRTCGetPeriodicIRQ( fd, &tmp );
   eprintf( "Counting 20 interrupts at Periodic IRQ rate %ldHz.\n", tmp );
   /* The frequencies 128Hz, 256Hz, ... 8192Hz are only allowed for root. */
@@ -27,7 +31,7 @@ void loop(int hz)
   for( i=1; i<TIME; tmp=liwNow(), i++ ){
     /* This blocks */
     liwRTCRead( fd );
-    printf( " %d: %d: %lld\n", hz, i, liwNow()-tmp );
+    printf( " %d: %d: %lld\n", arg->hz, i, liwNow()-tmp );
   }
   /* Disable periodic interrupts */
   liwRTCPeriodicIRQOff( fd );
@@ -36,12 +40,15 @@ void loop(int hz)
 
 int main(int argc, char *argv[])
 {
-  int i, n;
+  uint i, n;
+  arg_t arg;
   pthread_t thread[2];
 
   n = argc > 1 ? atoi(argv[1]) : 1;
-  for( i=1; i<=n; i++ )
-    pthread_create( &thread[i-1], NULL, (void *)loop, (void *)(1024/i) );
+  for( i=1; i<=n; i++ ){
+    arg.hz = 1024 / i;
+    pthread_create( &thread[i-1], NULL, (void *)loop, (void *)&arg );
+  }
   for( i=1; i<=n; i++ )
     pthread_join( thread[i-1], NULL );
   return 0;
