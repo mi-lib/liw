@@ -8,7 +8,7 @@ int main(void)
 {
   int cfd;
   char buf[BUFSIZ];
-  register int i;
+  int i;
 
   memset( buf, 0, BUFSIZ );
   if( !( sfd = liwSocketINETBind( "127.0.0.1", 3000, SOCK_STREAM, 5 ) ) )

@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-  register int i;
+  int i;
   char c = 'O';
   int id;
 

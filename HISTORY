@@ -1,3 +1,4 @@
+2025.05.11. Removed register qualifiers from example codes. [example]
 2025.04.30. Modified makefile in example to automatically clean plugins in example/dl for make clean. [example]
 2025.04.30. Modified pthread_test in example/rtc to resolve unmatched cast. [example]
 2025.04.29. Modified makefile to conform to new specification of zeda-makefile-gen. [all]

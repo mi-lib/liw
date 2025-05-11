@@ -15,7 +15,7 @@ int main(void)
 {
   int cfd;
   char buf[BUFSIZ];
-  register int i;
+  int i;
 
   signal( SIGINT, terminate );
   for( i=0; i<BUFSIZ; i++ ) buf[i] = '\0';

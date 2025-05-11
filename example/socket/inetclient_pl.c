@@ -5,7 +5,7 @@ void client(int port)
 {
   int fd;
   char buf[BUFSIZ];
-  register int i, n;
+  int i, n;
 
   n = port / 300;
   for( i=0; i<n; i++ ){

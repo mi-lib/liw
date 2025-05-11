@@ -4,7 +4,7 @@ int main(void)
 {
   int fd;
   char buf[BUFSIZ];
-  register int i;
+  int i;
 
   for( i=0; i<BUFSIZ; i++ ) buf[i] = '\0';
   fd = liwSocketUNConnect( SOCKET_UN_NAME, SOCK_STREAM );
