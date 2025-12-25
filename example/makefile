@@ -5,7 +5,7 @@ LINK=`liw-config -l`
 CC=gcc
 CFLAGS=-Wall -O2 $(INCLUDE) $(LIB)
 
-TARGET=$(shell ls *.c | xargs -i basename {} .c | tr -s "\n" " ")
+TARGET=$(shell ls *.c | xargs -I{} basename {} .c | tr -s "\n" " ")
 
 all: $(TARGET)
 %: %.c
