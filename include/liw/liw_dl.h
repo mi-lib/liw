@@ -48,7 +48,7 @@ liwDLHandle liwDLSymbol(liwDL *plugin, char *symbol);
  * plug-in list
  * ********************************************************** */
 
-zListClass(liwDLList, liwDLListCell, liwDL);
+ZEDA_DEF_LIST_CLASS( liwDLList, liwDLListCell, liwDL );
 
 bool liwDLListOpen(liwDLList *list, char path[], char *suffix);
 void liwDLListClose(liwDLList *list);
@@ -78,7 +78,7 @@ typedef struct{
   liwDL plugin;
   liwDLAPI *api;
 } liwDLAPIData;
-zListClass(liwDLAPIList, liwDLAPIListCell, liwDLAPIData);
+ZEDA_DEF_LIST_CLASS( liwDLAPIList, liwDLAPIListCell, liwDLAPIData );
 
 bool liwDLAPIListAdd(liwDLAPIList *list, char *name, char *api);
 bool liwDLAPIListOpen(liwDLAPIList *list, char path[], char *suffix, char *api);

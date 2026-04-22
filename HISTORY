@@ -1,3 +1,4 @@
+2026.04.22. Applied renaming of zListClass to ZEDA_DEF_LIST_CLASS. [liw_dl]
 2025.12.26. Replaced -i option of xargs in example/makefile to -I (thanks to Naoki Wakisaka). [example]
 2025.05.11. Removed register qualifiers from example codes. [example]
 2025.04.30. Modified makefile in example to automatically clean plugins in example/dl for make clean. [example]
